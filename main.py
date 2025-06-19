@@ -375,7 +375,7 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 
-    st.success(f"{indicador}: Q{comision_aplicada}")
+st.success(f"{indicador}: Q{comision_aplicada}")
 
 
         else:
