@@ -375,7 +375,8 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 
-st.success(f\"{indicador}: Q{comision_aplicada}\")
+        st.success(f"{indicador}: Q{comision_aplicada}")
+
 
         else:
             st.warning(f\"⚠️ No se encontró un tramo para {indicador} con {round(porcentaje, 2)}%\")
