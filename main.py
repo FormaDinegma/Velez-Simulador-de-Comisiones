@@ -363,24 +363,22 @@ if st.button("Calcular Comisión"):
             comision_aplicada = max(variable, fijo)
             total += comision_aplicada
 
-st.markdown(f"""
-<div style='background-color:#0e1117; padding: 20px; border-radius: 10px; margin-bottom: 10px;'>
-    <h4 style='color:#58a6ff;'>📊 Indicador: {indicador}</h4>
-    <ul style='list-style:none; color:#c9d1d9; padding-left: 0;'>
-        <li>🔹 <b>% Cumplimiento:</b> {round(porcentaje, 2)}%</li>
-        <li>🔹 <b>Comisión Variable:</b> Q{variable}</li>
-        <li>🔹 <b>Comisión Fija:</b> Q{fijo} ✅ <b>Comisión Aplicada:</b> Q{comision_aplicada}</li>
-    </ul>
-</div>
-""", unsafe_allow_html=True)
+            st.markdown(f"""
+            <div style='background-color:#0e1117; padding: 20px; border-radius: 10px; margin-bottom: 10px;'>
+                <h4 style='color:#58a6ff;'>📊 Indicador: {indicador}</h4>
+                <ul style='list-style:none; color:#c9d1d9; padding-left: 0;'>
+                    <li>🔹 <b>% Cumplimiento:</b> {round(porcentaje, 2)}%</li>
+                    <li>🔹 <b>Comisión Variable:</b> Q{variable}</li>
+                    <li>🔹 <b>Comisión Fija:</b> Q{fijo} ✅ <b>Comisión Aplicada:</b> Q{comision_aplicada}</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
 
-
-st.success(f"{indicador}: Q{comision_aplicada}")
-
+            st.success(f"{indicador}: Q{comision_aplicada}")
 
         else:
-            st.warning(f\"⚠️ No se encontró un tramo para {indicador} con {round(porcentaje, 2)}%\")
+            st.warning(f"⚠️ No se encontró un tramo para {indicador} con {round(porcentaje, 2)}%")
 
-    st.markdown(\"---\")
-    st.markdown(f\"<h2 style='color:green;'>💰 Comisión Total: Q{round(total, 2)}</h2>\", unsafe_allow_html=True)
-    st.code(f\"💰 Comisión Total: Q{round(total, 2)}\", language=\"markdown\")
+    st.markdown("---")
+    st.markdown(f"<h2 style='color:green;'>💰 Comisión Total: Q{round(total, 2)}</h2>", unsafe_allow_html=True)
+    st.code(f"💰 Comisión Total: Q{round(total, 2)}", language="markdown")
