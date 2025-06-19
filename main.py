@@ -363,7 +363,7 @@ if st.button("Calcular Comisión"):
             comision_aplicada = max(variable, fijo)
             total += comision_aplicada
 
-           st.markdown(f"""
+st.markdown(f"""
 <div style='background-color:#0e1117; padding: 20px; border-radius: 10px; margin-bottom: 10px;'>
     <h4 style='color:#58a6ff;'>📊 Indicador: {indicador}</h4>
     <ul style='list-style:none; color:#c9d1d9; padding-left: 0;'>
